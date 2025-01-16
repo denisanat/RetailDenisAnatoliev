@@ -1,0 +1,52 @@
+h1#titolSeccio, #nou_article {
+	border: 1px solid black;
+	color: orange;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 3rem;
+}
+
+.contenido {
+	margin-top: 100px;
+}
+
+.imatgeInici {
+	height: 100px;
+	width: 100px;
+}
+
+#caja_imagen {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+div.paragrafSeccio {
+	background-color: gray;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+div.paragrafSeccio > div {
+	background-color: coral;
+	width: 800px;
+	height: 3rem;
+	font-size: medium;
+	margin: 10px;
+	border: 2px solid black;
+	padding: 10px
+}
+
+div#articles_seccio > div {
+	background-color: white;
+	color: coral;
+	width: 500px;
+	border: 2px solid black;
+	margin: 10px;
+	height: 3rem;
+	font-style: bold;
+}

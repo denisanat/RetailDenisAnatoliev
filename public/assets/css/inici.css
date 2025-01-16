@@ -1,0 +1,14 @@
+h2#titolInici {
+	color: gray;
+}
+
+p#paragrafInici {
+	display: inline;
+	border: 3px dashed orange;
+}
+
+.imatgeInici {
+	display: block;
+	height: 300px;
+	width: 300px;
+}

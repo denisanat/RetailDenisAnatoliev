@@ -1,0 +1,43 @@
+{# templates/dades_seccio.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<link href="{{ asset('assets/css/estilsSeccio.css') }}" rel="stylesheet">
+	<div class="contenido">
+
+		{% if seccio %}
+			<h1 id="titolSeccio"><span>Dades secció {{ seccio.codi }}</span></h1>
+			<div id="caja_imagen">
+				<img class="imatgeInici" src="{{ asset(seccio.img) }}" />
+			</div>
+			<div id="nou_article">Nou article</div>
+		{% else %}
+			<h1 id="titolSeccio"><span>Dades secció</span></h1>
+			<div id="caja_imagen">
+				<img class="imatgeInici" src="{{ asset('assets/img/hand-drawn-no-data-illustration_23-2150544943.jpg') }}" />
+			</div>
+			<div id="nou_article"><strong>Seccio no trobada</strong></div>
+		{% endif %}
+
+		{% if seccio %}
+			<div class="paragrafSeccio">
+				<div id="nom_seccio"><strong>Nom</strong>: {{ seccio.nom }}</div>
+				<div id="descripcio_seccio"><strong>Descripció</strong>: {{ seccio.descripcio }}</div>
+				<div id="any_seccio"><strong>Any</strong>: {{ seccio.any }}</div>
+
+				<div id="articles_seccio">
+					<strong>Articles</strong>:
+					{% for article in seccio.articles %}
+						<div>{{article}}</div>
+					{% endfor %}
+				</div>
+
+			</div>	
+		{% endif %}
+
+		<a href ="{{ path('inici') }}">
+			<img class="imatgeInici" src="{{ asset('assets/img/png-transparent-spider-man-heroes-download-with-transparent-background-free-thumbnail.png') }}" />
+			Torna a l'inici
+		</a>
+	</div>
+{% endblock %}
