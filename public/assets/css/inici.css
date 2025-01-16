@@ -12,3 +12,16 @@ p#paragrafInici {
 	height: 300px;
 	width: 300px;
 }
+
+.caixa_seccio {
+	background-color: white;
+	color: orange;
+	border: 1px solid black;
+}
+
+.contenedor {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 100px;
+}

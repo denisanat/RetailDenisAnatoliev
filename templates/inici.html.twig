@@ -2,11 +2,21 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<link href="{{ asset('assets/css/inici.css') }}" rel="stylesheet">
-	<h2 id="titolInici"> IES LLUÍS SIMARRO </h2>
-	<p id="paragrafInici"> Paragraf d'inici </p>
-	
-	<a href ="{{ path('dades_seccions', {'codi': 2}) }}">
-		<img class="imatgeInici" src="{{ asset('assets/img/png-transparent-spider-man-heroes-download-with-transparent-background-free-thumbnail.png') }}" />
-	</a>
+	<div class="contenedor">
+		<link href="{{ asset('assets/css/inici.css') }}" rel="stylesheet">
+		<h2 id="titolInici"> IES LLUÍS SIMARRO </h2>
+		<p id="paragrafInici"> Paragraf d'inici </p>
+		
+		<a href ="{{ path('dades_seccions', {'codi': 2}) }}">
+			<img class="imatgeInici" src="{{ asset('assets/img/png-transparent-spider-man-heroes-download-with-transparent-background-free-thumbnail.png') }}" />
+		</a>
+
+		{% for seccio in seccions %}
+			<div class="caixa_seccio">
+				<a href ="{{ path('dades_seccions', {'codi': seccio.codi}) }}">
+					{{seccio.nom}} ( Codi: {{seccio.codi}} )
+				</a>
+			</div>
+		{% endfor %}
+	</div>
 {% endblock %}
