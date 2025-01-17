@@ -9,14 +9,8 @@ p#paragrafInici {
 
 .imatgeInici {
 	display: block;
-	height: 300px;
-	width: 300px;
-}
-
-.caixa_seccio {
-	background-color: white;
-	color: orange;
-	border: 1px solid black;
+	height: 200px;
+	width: 200px;
 }
 
 .contenedor {
@@ -24,4 +18,21 @@ p#paragrafInici {
 	align-items: center;
 	flex-direction: column;
 	margin-top: 100px;
+}
+
+.caixa_seccio {
+	text-align: center;
+}
+
+.contenedor_seccions {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-top: 30px;
+}
+
+.imatge_seccio {
+	height: 300px;
+	width: 300px;
+	display: block;
 }

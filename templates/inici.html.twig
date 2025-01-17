@@ -10,10 +10,13 @@
 		<a href ="{{ path('dades_seccions', {'codi': 2}) }}">
 			<img class="imatgeInici" src="{{ asset('assets/img/png-transparent-spider-man-heroes-download-with-transparent-background-free-thumbnail.png') }}" />
 		</a>
+	</div>
 
+	<div class="contenedor_seccions">
 		{% for seccio in seccions %}
 			<div class="caixa_seccio">
 				<a href ="{{ path('dades_seccions', {'codi': seccio.codi}) }}">
+					<img class="imatge_seccio" src="{{ asset(seccio.img) }}" />
 					{{seccio.nom}} ( Codi: {{seccio.codi}} )
 				</a>
 			</div>
